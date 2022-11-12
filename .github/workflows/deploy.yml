@@ -36,6 +36,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         run: |
-          git config user.email "fil.zwolinski@gmail.com"
-          git config user.name "filzwol"
+          git config --global user.email "fil.zwolinski@gmail.com"
+          git config --global user.name "filzwol"
           npm run deploy
