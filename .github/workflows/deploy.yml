@@ -32,9 +32,10 @@ jobs:
       - name: Install
         run: npm install
       - name: Build with Jekyll
-        run: |
-          ls ..
-          npm run build
+        run: npm run build
       - name: Deploy to GitHub Pages
         id: deployment
-        run: npm run deploy
+        run: |
+          git config user.email "fil.zwolinski@gmail.com"
+          git config user.name "filzwol"
+          npm run deploy
