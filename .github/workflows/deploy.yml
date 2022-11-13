@@ -35,7 +35,9 @@ jobs:
         run: npm run build
       - name: Deploy to GitHub Pages
         id: deployment
+        env:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config --global user.email "fil.zwolinski@gmail.com"
-          git config --global user.name "filzwol"
+          git config --global user.email "git@github.com"
+          git config --global user.password $github_token
           npm run deploy
