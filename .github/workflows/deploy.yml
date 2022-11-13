@@ -40,4 +40,5 @@ jobs:
         run: |
           git config --global user.email "git@github.com"
           git config --global user.password $github_token
+          git config --global user.name "github"
           npm run deploy
